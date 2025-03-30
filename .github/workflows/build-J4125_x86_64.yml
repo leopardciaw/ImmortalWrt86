@@ -13,11 +13,10 @@
 name: Build OpenWrt x86_64
 
 on:
-   schedule:
-    - cron: 55 15 * * *
+#   schedule:
+#    - cron: 15 16 * * *
 #          分 时 日 月 周5
-
-repository_dispatch:
+  repository_dispatch:
     workflow_dispatch:
     inputs:
       Cache:
