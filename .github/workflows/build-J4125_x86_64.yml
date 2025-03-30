@@ -191,11 +191,6 @@ jobs:
       run: |
         cd ImmortalWrt/bin/targets/*/*/
         rm -rf packages
-#       rm -rf *.bin
-#       rm -rf feeds*
-#       rm -rf *version*
-#       rm -rf *rootfs*
-#       rm -rf *.manifest
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "status=success" >> $GITHUB_OUTPUT
 
