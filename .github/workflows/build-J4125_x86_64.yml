@@ -13,7 +13,11 @@
 name: Build OpenWrt x86_64
 
 on:
-  repository_dispatch:
+   schedule:
+    - cron: 55 15 * * *
+#          分 时 日 月 周5
+
+repository_dispatch:
     workflow_dispatch:
     inputs:
       Cache:
@@ -24,7 +28,6 @@ on:
         options:
           - 'true'
           - 'false'
-
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: master
