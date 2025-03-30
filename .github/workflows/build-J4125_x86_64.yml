@@ -25,7 +25,7 @@ on:
           - 'true'
           - 'false'
   schedule:
-    - cron: 38 16 * * *
+    - cron: 38 16,18,20,22 * * *
 #    timezone: Asia/Shanghai
 #          分 时 日 月 周5
 env:
