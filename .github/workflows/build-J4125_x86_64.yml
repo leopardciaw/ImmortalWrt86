@@ -25,9 +25,13 @@ on:
           - 'true'
           - 'false'
   schedule:
-    - cron: 18 0 * * *
-#    timezone: Asia/Shanghai
+    - cron: 50 2 * * *
+#     timezone: Asia/Shanghai
 #          分 时 日 月 周5
+  push:
+    branches:
+      - master
+
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: master
@@ -48,6 +52,11 @@ jobs:
       contents: write
 
     steps:
+    - name: Show the timezone
+      run: |
+        echo "The timezone is $TZ"
+        date
+        
     - name: Check Server Performance
       run: |
         echo "警告⚠"
